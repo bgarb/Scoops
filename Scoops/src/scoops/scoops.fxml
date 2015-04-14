@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Polygon fill="#9a4c4c" layoutX="300.0" layoutY="360.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE">
+        <points>
+          <Double fx:value="-50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="0.0" />
+          <Double fx:value="-60.0" />
+        </points>
+      </Polygon>
+      <Button layoutX="78.0" layoutY="76.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="82.0" text="Start" />
+      <Text fontSmoothingType="LCD" layoutX="241.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scoops" wrappingWidth="168.2978515625">
+         <font>
+            <Font name="Cambria Math" size="31.0" />
+         </font>
+      </Text>
+      <Circle fill="#fcdaf2" layoutX="300.0" layoutY="275.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f3f9ff" layoutX="300.0" layoutY="225.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button layoutX="69.0" layoutY="122.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="100.0" text="High Score" />
+      <Circle fill="#fcdaf2" layoutX="256.0" layoutY="300.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#fcdaf2" layoutX="275.0" layoutY="306.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#fcdaf2" layoutX="306.0" layoutY="312.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#fcdaf2" layoutX="341.0" layoutY="300.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f3f9ff" layoutX="256.0" layoutY="256.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f3f9ff" layoutX="281.0" layoutY="268.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f3f9ff" layoutX="313.0" layoutY="268.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f3f9ff" layoutX="350.0" layoutY="256.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</Pane>
