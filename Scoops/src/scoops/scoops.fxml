@@ -7,7 +7,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Polygon fill="#9a4c4c" layoutX="300.0" layoutY="360.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE">
@@ -20,7 +19,7 @@
           <Double fx:value="-60.0" />
         </points>
       </Polygon>
-      <Button layoutX="78.0" layoutY="76.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="82.0" text="Start" />
+      <Button graphicTextGap="5.0" layoutX="78.0" layoutY="76.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="82.0" text="Start" textFill="#3c3a3a" />
       <Text fontSmoothingType="LCD" layoutX="241.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scoops" wrappingWidth="168.2978515625">
          <font>
             <Font name="Cambria Math" size="31.0" />
@@ -37,5 +36,6 @@
       <Circle fill="#f3f9ff" layoutX="281.0" layoutY="268.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="#f3f9ff" layoutX="313.0" layoutY="268.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="#f3f9ff" layoutX="350.0" layoutY="256.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button layoutX="65.0" layoutY="175.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="109.0" text="Stop" />
    </children>
 </Pane>
