@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button defaultButton="true" graphicTextGap="1.0" layoutX="208.0" layoutY="220.0" mnemonicParsing="false" text="New Game" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button defaultButton="true" graphicTextGap="1000.0" layoutX="206.0" layoutY="254.0" mnemonicParsing="false" text="Highscores" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button defaultButton="true" graphicTextGap="1000.0" layoutX="229.0" layoutY="320.0" mnemonicParsing="false" text="Exit" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button defaultButton="true" graphicTextGap="1000.0" layoutX="215.0" layoutY="287.0" mnemonicParsing="false" text="Settings" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Text fontSmoothingType="LCD" layoutX="58.0" layoutY="100.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="SCOOPS">
+         <font>
+            <Font name="Baskerville" size="96.0" />
+         </font>
+         <effect>
+            <Bloom threshold="0.0" />
+         </effect>
+      </Text>
+      <Polygon fill="#bc9c7b" layoutX="219.0" layoutY="134.0" rotate="180.0" scaleX="0.65" scaleY="0.75" stroke="BLACK" strokeType="INSIDE">
+        <points>
+          <Double fx:value="-50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="0.0" />
+          <Double fx:value="-60.0" />
+        </points>
+      </Polygon>
+      <Polygon fill="#bc9c7b" layoutX="297.0" layoutY="134.0" rotate="-180.0" scaleX="0.65" scaleY="0.75" stroke="BLACK" strokeType="INSIDE">
+         <points>
+            <Double fx:value="-50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="0.0" />
+            <Double fx:value="-60.0" />
+         </points>
+      </Polygon>
+      <Circle fill="#f5c9df" layoutX="219.0" layoutY="69.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="293.0" layoutY="69.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="108.0" layoutY="509.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="58.0" layoutY="522.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="25.0" layoutY="586.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="83.0" layoutY="543.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="127.0" layoutY="586.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="127.0" layoutY="556.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="161.0" layoutY="522.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="24.0" layoutY="556.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="176.0" layoutY="577.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="14.0" layoutY="509.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="74.0" layoutY="590.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="74.0" layoutY="494.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="263.0" layoutY="495.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="263.0" layoutY="591.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="203.0" layoutY="510.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="365.0" layoutY="578.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="213.0" layoutY="557.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="350.0" layoutY="523.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="316.0" layoutY="557.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="316.0" layoutY="587.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="272.0" layoutY="544.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="214.0" layoutY="587.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="247.0" layoutY="523.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f5c9df" layoutX="297.0" layoutY="510.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</Pane>
