@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scoops.StartscreenController">
    <children>
       <Circle fill="#f5c9df" layoutX="70.0" layoutY="536.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="#f5c9df" layoutX="25.0" layoutY="586.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
