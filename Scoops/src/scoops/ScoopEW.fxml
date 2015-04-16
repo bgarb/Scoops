@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="261.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+  <tabs>
+    <Tab text="Home">
+         <content>
+            <Pane prefHeight="400.0" prefWidth="138.0">
+               <children>
+                  <Button layoutX="66.0" layoutY="50.0" mnemonicParsing="false" text="New Game" />
+                  <Button layoutX="63.0" layoutY="83.0" mnemonicParsing="false" text="Instructions" />
+                  <Button layoutX="65.0" layoutY="119.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="86.0" text="Ice Cream" />
+                  <CheckBox layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Music" />
+               </children>
+            </Pane>
+         </content></Tab>
+      <Tab text="Instructions">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextArea layoutX="9.0" layoutY="39.0" prefHeight="302.0" prefWidth="200.0" text="Lorem ipsum dolor sit amet, mei erant nobis omittantur ad, magna mundi iisque has ei, principes euripidis est cu. Aliquid ancillae albucius his ad. Indoctum salutandi in eum, autem essent ea has, officiis salutandi ei est. Latine suscipit nec at, nam no noster eligendi accommodare." wrapText="true" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Ice Cream">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextArea layoutX="9.0" layoutY="64.0" prefHeight="245.0" prefWidth="200.0" />
+                  <TextArea layoutX="9.0" layoutY="35.0" prefHeight="309.0" prefWidth="200.0" text="Lorem ipsum dolor sit amet, mei erant nobis omittantur ad, magna mundi iisque has ei, principes euripidis est cu. Aliquid ancillae albucius his ad. Indoctum salutandi in eum, autem essent ea has, officiis salutandi ei est. Latine suscipit nec at, nam no noster eligendi accommodare." wrapText="true" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+    <Tab text="Game">
+         <content>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="164.0" layoutY="14.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="50.0" text="Pause">
+                     <font>
+                        <Font name="Arial" size="11.0" />
+                     </font>
+                  </Button>
+                  <ProgressIndicator layoutX="14.0" layoutY="14.0" progress="0.0" />
+               </children>
+            </Pane>
+         </content></Tab>
+  </tabs>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</TabPane>
