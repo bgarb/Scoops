@@ -6,9 +6,15 @@ package scoops;
  * and open the template in the editor.
  */
 
+import java.awt.event.ActionEvent;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 
 /**
  * FXML Controller class
@@ -24,5 +30,21 @@ public class StartscreenController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+    
+    @FXML
+    private Label label;
+    
+    @FXML
+    private void handleButtonAction(ActionEvent event) {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("OfficialPlayScreen.fxml"));
+            Scene scene = new Scene(root);
+            Scoops.mainWindow.setScene(scene);
+            Scoops.mainWindow.show();
+        } catch (IOException ex) {
+            Logger.getLogger(StartScreenController.class.getName()).log(Level.SEVERE, null, ex());
+        }
+    }
     
 }
