@@ -1,49 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Polygon fill="#790707" layoutX="333.0" layoutY="186.0" rotate="180.0" scaleX="0.5" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
-         <points>
-            <Double fx:value="-50.0" />
-            <Double fx:value="40.0" />
-            <Double fx:value="50.0" />
-            <Double fx:value="40.0" />
-            <Double fx:value="0.0" />
-            <Double fx:value="-60.0" />
-         </points>
-      </Polygon>
-      <Polygon fill="#790707" layoutX="271.0" layoutY="186.0" rotate="-179.4" scaleX="0.5" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
-        <points>
-          <Double fx:value="-50.0" />
-          <Double fx:value="40.0" />
-          <Double fx:value="50.0" />
-          <Double fx:value="40.0" />
-          <Double fx:value="0.0" />
-          <Double fx:value="-60.0" />
-        </points>
-      </Polygon>
-      <Ellipse fill="#f2f2f2" layoutX="271.0" layoutY="127.0" radiusX="29.0" radiusY="25.0" stroke="BLACK" strokeType="INSIDE" />
-      <Ellipse fill="#f2baef" layoutX="271.0" layoutY="106.0" radiusX="22.0" radiusY="21.0" stroke="BLACK" strokeType="INSIDE" />
-      <Ellipse fill="#f2f2f2" layoutX="333.0" layoutY="127.0" radiusX="29.0" radiusY="25.0" stroke="BLACK" strokeType="INSIDE" />
-      <Ellipse fill="#f2baef" layoutX="333.0" layoutY="106.0" radiusX="22.0" radiusY="21.0" stroke="BLACK" strokeType="INSIDE" />
-      <Text layoutX="134.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SC" wrappingWidth="115.0">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="72.0" />
-         </font>
-      </Text>
-      <Text layoutX="362.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PS" wrappingWidth="98.0">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="72.0" />
-         </font>
-      </Text>
-      <Ellipse fill="#f2baef" layoutX="300.0" layoutY="271.0" radiusX="49.0" radiusY="30.0" stroke="BLACK" strokeType="INSIDE" />
-      <Button defaultButton="true" layoutX="270.0" layoutY="258.0" mnemonicParsing="false" text="Menu" textFill="#8a1616" />
-   </children>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Polygon layoutX="333.0" layoutY="186.0" rotate="180.0" scaleX="0.5" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+      <fill>
+        <Color blue="0.027" green="0.027" red="0.475" fx:id="x1" />
+      </fill>
+      <points>
+        <Double fx:value="-50.0" />
+        <Double fx:value="40.0" />
+        <Double fx:value="50.0" />
+        <Double fx:value="40.0" />
+        <Double fx:value="0.0" />
+        <Double fx:value="-60.0" />
+      </points>
+    </Polygon>
+    <Polygon fill="$x1" layoutX="271.0" layoutY="186.0" rotate="-179.4" scaleX="0.5" scaleY="0.7" stroke="BLACK" strokeType="INSIDE">
+      <points>
+        <Double fx:value="-50.0" />
+        <Double fx:value="40.0" />
+        <Double fx:value="50.0" />
+        <Double fx:value="40.0" />
+        <Double fx:value="0.0" />
+        <Double fx:value="-60.0" />
+      </points>
+    </Polygon>
+    <Ellipse layoutX="271.0" layoutY="127.0" radiusX="29.0" radiusY="25.0" stroke="BLACK" strokeType="INSIDE">
+      <fill>
+        <Color blue="0.949" green="0.949" red="0.949" fx:id="x2" />
+      </fill>
+    </Ellipse>
+    <Ellipse layoutX="271.0" layoutY="106.0" radiusX="22.0" radiusY="21.0" stroke="BLACK" strokeType="INSIDE">
+      <fill>
+        <Color blue="0.937" green="0.729" red="0.949" fx:id="x3" />
+      </fill>
+    </Ellipse>
+    <Ellipse fill="$x2" layoutX="333.0" layoutY="127.0" radiusX="29.0" radiusY="25.0" stroke="BLACK" strokeType="INSIDE" />
+    <Ellipse fill="$x3" layoutX="333.0" layoutY="106.0" radiusX="22.0" radiusY="21.0" stroke="BLACK" strokeType="INSIDE" />
+    <Text layoutX="134.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SC" wrappingWidth="115.0">
+      <font>
+        <Font name="Arial Rounded MT Bold" size="72.0" fx:id="x4" />
+      </font>
+    </Text>
+    <Text font="$x4" layoutX="362.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PS" wrappingWidth="98.0" />
+    <Ellipse fill="$x3" layoutX="300.0" layoutY="271.0" radiusX="49.0" radiusY="30.0" stroke="BLACK" strokeType="INSIDE" />
+    <Button defaultButton="true" layoutX="277.0" layoutY="261.0" mnemonicParsing="false" text="Play" textFill="#8a1616" />
+  </children>
 </Pane>
