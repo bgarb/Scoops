@@ -17,6 +17,7 @@ import javafx.stage.Stage;
  * @author csstudent
  */
 public class Scoops extends Application {
+    static Object mainWindow;
     
     @Override
     public void start(Stage stage) throws Exception {
