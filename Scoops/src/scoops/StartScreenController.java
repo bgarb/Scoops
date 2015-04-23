@@ -10,18 +10,21 @@ import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 
 /**
  * FXML Controller class
  *
  * @author csstudent
  */
-public class StartscreenController implements Initializable {
+public class StartScreenController implements Initializable {
 
     /**
      * Initializes the controller class.
@@ -35,7 +38,7 @@ public class StartscreenController implements Initializable {
     private Label label;
     
     @FXML
-    private void handleButtonAction(ActionEvent event) {
+    private void handleButtonActionl(ActionEvent event) {
         Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("OfficialPlayScreen.fxml"));
@@ -43,7 +46,7 @@ public class StartscreenController implements Initializable {
             Scoops.mainWindow.setScene(scene);
             Scoops.mainWindow.show();
         } catch (IOException ex) {
-            Logger.getLogger(StartScreenController.class.getName()).log(Level.SEVERE, null, ex());
+            Logger.getLogger(StartScreenController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
