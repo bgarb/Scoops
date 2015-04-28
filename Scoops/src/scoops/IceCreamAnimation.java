@@ -41,11 +41,12 @@ public class IceCreamAnimation extends Transition {
     }
 
 
+    @Override
     protected void interpolate(double k) {
         final int index = Math.min((int) Math.floor(k * count), count - 1);
         if (index != lastIndex) {
             final int y = (index / columns) * height + offsetY;
-            imageView.
+            imageView.setY(height);
            lastIndex = index;
         }
     }
