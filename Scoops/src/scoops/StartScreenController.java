@@ -38,10 +38,23 @@ public class StartScreenController implements Initializable {
     private Label label;
     
     @FXML
-    private void handleButtonAction(ActionEvent event) {
+    private void playScreenButton(ActionEvent event) {
         Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("OfficialPlayScreen.fxml"));
+            Scene scene = new Scene(root);
+            Scoops.mainWindow.setScene(scene);
+            Scoops.mainWindow.show();
+        } catch (IOException ex) {
+            Logger.getLogger(StartScreenController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    @FXML
+    private void highscoreScreenButton(ActionEvent event) {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("OfficialHighScoresScreen.fxml"));
             Scene scene = new Scene(root);
             Scoops.mainWindow.setScene(scene);
             Scoops.mainWindow.show();
