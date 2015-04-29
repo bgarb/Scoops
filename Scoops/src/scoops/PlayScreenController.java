@@ -73,7 +73,5 @@ public class PlayScreenController implements Initializable {
 
             }
         }.start();
-
     }
-
 }
