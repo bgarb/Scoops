@@ -56,7 +56,13 @@ public class PlayScreenController implements Initializable{
     private void handleKeyPressed (KeyEvent event) {
         KeyCode key = event.getCode();
         conePosition = 0;
-        AnimationTimer timer = new AnimationTimer();
+        AnimationTimer timer = new AnimationTimer() {
+
+            @Override
+            public void handle(long now) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
         if (key == RIGHT) {
             conePosition++;
         }
