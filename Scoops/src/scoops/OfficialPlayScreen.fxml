@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.shape.*?>
@@ -12,29 +13,26 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scoops.StartScreenController">
    <children>
-      <ScrollPane prefHeight="305.0" prefWidth="640.0">
-         <content>
-            <ProgressIndicator opacity="0.41" prefHeight="66.0" prefWidth="62.0" progress="0.0">
-               <padding>
-                  <Insets top="3.0" />
-               </padding>
-               <effect>
-                  <Glow />
-               </effect>
-            </ProgressIndicator>
-         </content>
-      </ScrollPane>
-      <Pane prefHeight="174.0" prefWidth="640.0">
+      <Pane layoutY="514.0" prefHeight="80.0" prefWidth="500.0">
          <children>
-            <Slider layoutX="583.0" layoutY="7.0" orientation="VERTICAL" prefHeight="104.0" prefWidth="15.0" />
-            <ToggleButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="124.0" text="On/Off" textAlignment="CENTER" textFill="#2faea6">
-               <font>
-                  <Font name="Marker Felt Thin" size="15.0" />
-               </font>
-            </ToggleButton>
+            <ImageView fitHeight="91.0" fitWidth="500.0">
+               <image>
+                  <Image url="@../../../../../Desktop/DP_DT_KS_BLACKWHITE_1X11.jpg" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
+      <ImageView fitHeight="514.0" fitWidth="507.0">
+         <image>
+            <Image url="@../../../../../Desktop/pastel_background_by_ohsnapjenny-d5dj9ck.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="47.0" layoutX="227.0" layoutY="434.0">
+         <image>
+            <Image url="@../../../../../Desktop/grid.png" />
+         </image>
+      </ImageView>
    </children>
-</VBox>
+</Pane>
