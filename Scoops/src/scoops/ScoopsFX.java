@@ -5,7 +5,7 @@
  */
 package scoops;
 
-import javafx.animation.Animation;
+/**import javafx.animation.Animation;
 import javafx.application.Application;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
@@ -14,10 +14,10 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-/**
+
  *
  * @author csstudent
  */
-public class ScoopsFX extends Application {
-    private static final Image IceCream = new Image();
-}
+//public class ScoopsFX extends Application {
+   // private static final Image IceCream = new Image("");
+//}
