@@ -73,6 +73,12 @@ public class PlayScreenController implements Initializable{
         cone.setX(conePosition);
         
     }
+    
+    
+    public static void collisionDetector(){
+    
+        
+    }
         
         
         
