@@ -17,15 +17,27 @@ import javafx.util.Duration;
 
 public class ScoopsFX extends Application {  
     
-    private static final Image iceCream = new Image("http://www.bluebunny.com/content/cms/products/204x154/French_Vanilla_3gal.s3v1.png");
+    private static final Image iceCream = new Image("http://www.bluebunny.com/content/cms/products/204x154/French_Vanilla_3gal.s3v1.png"); 
+
     
     public static void main(String[] args){
         launch(args);
     }
 
     
-    public void start(Stage primaryStage) throws Exception {
-        final ImageView iView;
-        iView = new ImageView(iceCream); 
+   /** public void start(Stage primaryStage) throws Exception {
+       
+        final Animation animation = new IceCreamAnimation(
+                imageView, 
+                Duration.millis(1000),
+                COUNT, COLUMNS, 
+                OFFSET_X, OFFSET_Y,
+                WIDTH, HEIGHT
+                
+                
+                );
+        
+
     }
 }
+**/
