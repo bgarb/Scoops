@@ -19,16 +19,21 @@ public class ScoopsFX extends Application {
     
     private static final Image iceCream = new Image("http://www.bluebunny.com/content/cms/products/204x154/French_Vanilla_3gal.s3v1.png"); 
 
+    private final int count = 0;
+    private final int columns = 0;
+    private final int offsetY = 0;
+    private final int width = 0;
+    private final int height = 0;
     
     public static void main(String[] args){
         launch(args);
     }
 
     
-   /** public void start(Stage primaryStage) throws Exception {
+   public void start(Stage primaryStage) throws Exception {
        
         final Animation animation = new IceCreamAnimation(
-                imageView, 
+                
                 Duration.millis(1000),
                 COUNT, COLUMNS, 
                 OFFSET_X, OFFSET_Y,
@@ -40,4 +45,3 @@ public class ScoopsFX extends Application {
 
     }
 }
-**/
