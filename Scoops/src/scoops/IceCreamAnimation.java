@@ -40,6 +40,10 @@ public class IceCreamAnimation extends Transition {
         setInterpolator(Interpolator.LINEAR);
     }
 
+    IceCreamAnimation(Duration millis, int count, int columns, int offsetY, int width, int height) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 
     @Override
     protected void interpolate(double k) {
