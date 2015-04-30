@@ -17,21 +17,21 @@
    <children>
       <Pane layoutY="514.0" prefHeight="80.0" prefWidth="500.0">
          <children>
-            <ImageView fitHeight="91.0" fitWidth="500.0">
+            <ImageView fitHeight="104.0" fitWidth="500.0" layoutY="-18.0">
                <image>
-                  <Image url="@../../../../../Desktop/DP_DT_KS_BLACKWHITE_1X11.jpg" />
+                  <Image url="@DP_DT_KS_BLACKWHITE_1X11.jpg" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <ImageView fitHeight="514.0" fitWidth="507.0">
+      <ImageView fitHeight="508.0" fitWidth="500.0">
          <image>
-            <Image url="@../../../../../Desktop/pastel_background_by_ohsnapjenny-d5dj9ck.jpg" />
+            <Image url="@pastel_background_by_ohsnapjenny-d5dj9ck.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="80.0" fitWidth="47.0" layoutX="227.0" layoutY="434.0">
+      <ImageView fitHeight="80.0" fitWidth="70.0" layoutX="215.0" layoutY="428.0">
          <image>
-            <Image url="@../../../../../Desktop/grid.png" />
+            <Image url="@grid.png" />
          </image>
       </ImageView>
    </children>
