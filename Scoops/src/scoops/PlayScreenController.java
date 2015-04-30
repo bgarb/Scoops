@@ -22,70 +22,56 @@ import static javafx.scene.input.KeyCode.*;
 import javafx.scene.input.KeyEvent;
 import javafx.animation.AnimationTimer;
 
-
-
-
-
 /**
  *
  * @author csstudent
  */
-
 /**
  * FXML Controller class
  *
  * @author csstudent
  */
-public class PlayScreenController implements Initializable{
+public class PlayScreenController implements Initializable {
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
-     @FXML
+    }
+
+    @FXML
     private javafx.scene.control.Label label;
     private int conePosition;
-     
+    private long keyPressed;
+
     @FXML
     private ImageView cone;
-    
+
     @FXML
-    private void handleKeyPressed (KeyEvent event) {
+    private void handleKeyPressed(KeyEvent event) {
         KeyCode key = event.getCode();
         conePosition = 0;
-        AnimationTimer timer = new AnimationTimer() {
-
+        keyPressed = 0;
+        new AnimationTimer() {
             @Override
             public void handle(long now) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                if (keyPressed == 0) {
+                    keyPressed = now;
+                } else if (now - keyPressed > 200) {
+                    if (key == RIGHT) {
+                        conePosition++;
+                        keyPressed = now;
+                    } else if (key == LEFT) {
+                        conePosition--;
+                        keyPressed = now;
+                    }
+
+                    cone.setX(conePosition);
+                }
+
             }
-        };
-        if (key == RIGHT) {
-            conePosition++;
-        }
-        else if (key == LEFT) {
-            conePosition--;
-        }
-           
-        cone.setX(conePosition);
-        
+        }.start();
     }
-    
-    
-    public static void collisionDetector(){
-    
-        
-    }
-        
-        
-        
-        
-  
-    
 }
-
-    
-
