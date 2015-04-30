@@ -195,7 +195,7 @@
     <Circle fill="$x1" layoutX="12.0" layoutY="68.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
     <Circle fill="$x1" layoutX="45.0" layoutY="4.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
     <Circle fill="$x1" layoutX="95.0" layoutY="-9.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
-    <Button defaultButton="true" graphicTextGap="1.0" layoutX="208.0" layoutY="220.0" mnemonicParsing="false" onAction="#handleButtonAction" text="New Game" textFill="WHITE">
+    <Button defaultButton="true" graphicTextGap="1.0" layoutX="208.0" layoutY="220.0" mnemonicParsing="false" onAction="#playScreenButton" text="New Game" textFill="WHITE">
       <effect>
         <DropShadow />
       </effect>
