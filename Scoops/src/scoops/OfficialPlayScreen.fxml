@@ -29,7 +29,7 @@
             <Image url="@pastel_background_by_ohsnapjenny-d5dj9ck.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="80.0" fitWidth="40.0" layoutX="230.0" layoutY="428.0">
+      <ImageView fitHeight="80.0" fitWidth="70.0" layoutX="215.0" layoutY="428.0">
          <image>
             <Image url="@grid.png" />
          </image>
