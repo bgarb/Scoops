@@ -29,14 +29,6 @@ public class ScoopsFX extends Application {
         iView = new ImageView(iceCream); 
     }
     
-    public static void collisionDetector(){ 
-        ScoopsFX a = null; 
-        if(a.getHeight()){
-        
-        }
-        
-        }
-
     
         
     }
