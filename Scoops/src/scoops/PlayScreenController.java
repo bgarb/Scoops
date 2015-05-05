@@ -1,7 +1,7 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor..
+ * and open the template in the editor.
  */
 package scoops;
 
@@ -73,5 +73,17 @@ public class PlayScreenController implements Initializable {
 
             }
         }.start();
+    }
+    @FXML
+    private void quitButton(ActionEvent event) {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("OfficialStartScreen.fxml"));
+            Scene scene = new Scene(root);
+            Scoops.mainWindow.setScene(scene);
+            Scoops.mainWindow.show();
+        } catch (IOException ex) {
+            Logger.getLogger(StartScreenController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }
