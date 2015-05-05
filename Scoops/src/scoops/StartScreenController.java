@@ -50,6 +50,19 @@ public class StartScreenController implements Initializable {
         }
     }
     
+     @FXML
+    private void settingsScreenButton(ActionEvent event) {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("OfficialSettingsScreen.fxml"));
+            Scene scene = new Scene(root);
+            Scoops.mainWindow.setScene(scene);
+            Scoops.mainWindow.show();
+        } catch (IOException ex) {
+            Logger.getLogger(StartScreenController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
     @FXML
     private void highscoreScreenButton(ActionEvent event) {
         Parent root;
