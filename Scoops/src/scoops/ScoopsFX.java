@@ -9,6 +9,7 @@ import javafx.animation.Animation;
 import javafx.application.Application;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -17,16 +18,36 @@ import javafx.util.Duration;
 
 public class ScoopsFX extends Application {  
     
-    private static final Image iceCream = new Image("http://www.bluebunny.com/content/cms/products/204x154/French_Vanilla_3gal.s3v1.png");
+    private static final Image iceCream = new Image("http://www.bluebunny.com/content/cms/products/204x154/French_Vanilla_3gal.s3v1.png"); 
+    
+
+    private final int count = 0;
+    private final int columns = 0;
+    private final int offsetY = 0;
+    private final int width = 0;
+    private final int height = 0;
     
     public static void main(String[] args){
         launch(args);
     }
 
     
-    public void start(Stage primaryStage) throws Exception {
-        final ImageView iView;
-        iView = new ImageView(iceCream); 
+   public void start(Stage primaryStage) throws Exception {
+       
+        final Animation animation = new IceCreamAnimation(
+                
+                Duration.millis(1000),
+                count, columns, 
+                 offsetY,
+                width, height
+                
+                
+                );
+    animation.setCycleCount(Animation.INDEFINITE);
+    animation.play();
+
+ 
+
     }
     
     
