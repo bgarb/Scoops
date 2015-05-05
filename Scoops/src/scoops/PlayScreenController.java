@@ -74,10 +74,14 @@ public class PlayScreenController implements Initializable{
         
     }
     
-    
-    public static void collisionDetector(){
-    
-        
+    int x = 0;
+    int y = 0;
+    public int getY(){
+        if( x >= 0){
+            conePosition += x;
+            y = conePosition;
+        }
+        return y;    
     }
         
         
