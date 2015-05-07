@@ -75,16 +75,8 @@ public class PlayScreenController implements Initializable {
         }.start();
     }
     
-    int x = 0;
-    int y = 0;
-    public int getY(){
-        if( x >= 0){
-            conePosition += x;
-            y = conePosition;
-        }
-        return y;   
-    }
-        
+    
+   
         @FXML
     
     private void quitButton(ActionEvent event) {
