@@ -51,6 +51,6 @@ public class ScoopsFX extends Application {
     }
     
     
-        
-    }
+     
+}  
 
