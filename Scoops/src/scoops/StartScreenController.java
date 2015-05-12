@@ -50,7 +50,7 @@ public class StartScreenController implements Initializable {
         }
     }
     
-     @FXML
+    @FXML
     private void settingsScreenButton(ActionEvent event) {
         Parent root;
         try {
