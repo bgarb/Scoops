@@ -45,6 +45,9 @@ public class PlayScreenController implements Initializable {
     private javafx.scene.control.Label label;
     private int conePosition;
     private long keyPressed;
+    private boolean rightPressed = false;
+    private boolean leftPressed = false;
+    
 
     @FXML
     private ImageView cone;
@@ -52,29 +55,34 @@ public class PlayScreenController implements Initializable {
     @FXML
     private void handleKeyPressed(KeyEvent event) {
         KeyCode key = event.getCode();
-        conePosition = 0;
         keyPressed = 0;
-        new AnimationTimer() {
-            @Override
-            public void handle(long now) {
-                if (keyPressed == 0) {
-                    keyPressed = now;
-                } else if (now - keyPressed > 200) {
-                    if (key == RIGHT) {
-                        conePosition++;
+            new AnimationTimer() {
+                @Override
+                public void handle(long now) {
+                    if (keyPressed == 0) {
                         keyPressed = now;
-                    } else if (key == LEFT) {
-                        conePosition--;
-                        keyPressed = now;
+                    } else if (true){//now - keyPressed > 200) {
+                        if (key == RIGHT) {                           
+                            conePosition++;
+                            keyPressed = now;
+                            rightPressed = true;
+                        }else if (key == LEFT) {
+                            conePosition--;
+                            keyPressed = now;
+                            leftPressed = true;
+                        }
+
+                        cone.setX(conePosition);
                     }
-
-                    cone.setX(conePosition);
-                }
-
-            }
-        }.start();
+                }    
+            }.start();       
     }
-    
+
+    private void handleKeyReleased(KeyEvent event) {
+        KeyCode key = event.getCode();
+       
+        
+    }
     int x = 0;
     int y = 0;
     public int getY(){
