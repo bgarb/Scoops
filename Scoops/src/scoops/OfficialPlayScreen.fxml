@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.web.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
@@ -15,6 +16,16 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scoops.StartScreenController">
    <children>
+      <ImageView fitHeight="514.0" fitWidth="507.0" layoutX="11.0">
+         <image>
+            <Image url="@../../../../../Desktop/pastel_background_by_ohsnapjenny-d5dj9ck.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="14.0" layoutY="20.0" prefHeight="24.0" prefWidth="81.0" text="Scoops left:">
+         <font>
+            <Font name="Baskerville" size="17.0" />
+         </font>
+      </Label>
       <Pane layoutY="514.0" prefHeight="80.0" prefWidth="500.0">
          <children>
             <ImageView fitHeight="91.0" fitWidth="500.0">
@@ -24,15 +35,13 @@
             </ImageView>
          </children>
       </Pane>
-      <ImageView fitHeight="514.0" fitWidth="507.0">
-         <image>
-            <Image url="@../../../../../Desktop/pastel_background_by_ohsnapjenny-d5dj9ck.jpg" />
-         </image>
-      </ImageView>
       <ImageView fitHeight="80.0" fitWidth="47.0" layoutX="227.0" layoutY="434.0">
          <image>
             <Image url="@../../../../../Desktop/grid.png" />
          </image>
       </ImageView>
+      <Circle fill="#dcbadd" layoutX="108.0" layoutY="32.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#dcbadd" layoutX="130.0" layoutY="32.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#dcbadd" layoutX="152.0" layoutY="32.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
    </children>
 </Pane>
