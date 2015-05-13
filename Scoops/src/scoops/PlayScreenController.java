@@ -90,8 +90,8 @@ public class PlayScreenController implements Initializable{
         }
     }
 
-    private void scoreBoard(){
-    
+    private void lifeCounter(){
+        
     }
 
    
