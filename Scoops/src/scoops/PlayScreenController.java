@@ -10,7 +10,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -78,7 +77,7 @@ public class PlayScreenController implements Initializable{
    
         @FXML
     
-    private void quitButton(ActionEvent event) {
+    private void quitButton() {
         Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("OfficialStartScreen.fxml"));
@@ -89,10 +88,20 @@ public class PlayScreenController implements Initializable{
             Logger.getLogger(StartScreenController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
-    private void lifeCounter(){
-        
-    }
+    
+    /* replace the coneTouchesOnion after someone creates that method 
+    private int lives = 3; 
+    private void catchingTomatoes(){
+        if(coneCatchesOnions == true){
+            lives = lives - 1;
+            circle.setStyle("-fx-opacity-0.3");
+        }
+            if(lives == 3){
+            quitButton();
+        }            
+    
 
    
-}
+    }
+*/
+}   
