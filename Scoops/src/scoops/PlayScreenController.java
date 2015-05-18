@@ -20,6 +20,7 @@ import javafx.scene.image.ImageView;
 import static javafx.scene.input.KeyCode.*;
 import javafx.scene.input.KeyEvent;
 import javafx.animation.AnimationTimer;
+import javafx.scene.shape.Circle;
 
 
 
@@ -89,12 +90,17 @@ public class PlayScreenController implements Initializable{
         }
     }
     
-    /* replace the coneTouchesOnion after someone creates that method 
+    private boolean caughtOnion(){
+        return true; 
+    }
+    
     private int lives = 3; 
-    private void catchingTomatoes(){
-        if(coneCatchesOnions == true){
+    private Circle Circle1 = new Circle();
+    
+    private void pointLost(){
+        if(caughtOnion() == true){
             lives = lives - 1;
-            circle.setStyle("-fx-opacity-0.3");
+            Circle1.setStyle("-fx-opacity-0.3");
         }
             if(lives == 3){
             quitButton();
@@ -103,5 +109,4 @@ public class PlayScreenController implements Initializable{
 
    
     }
-*/
 }   
