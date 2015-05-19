@@ -90,12 +90,19 @@ public class PlayScreenController implements Initializable{
         }
     }
     
-    private boolean caughtOnion(){
-        return true; 
-    }
+    private ImageView Onion; 
     
+    private boolean caughtOnion(){
+        if (Onion.getY() == cone.getY() && Onion.getX() == cone.getX()){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     private int lives = 3; 
-    private Circle Circle1 = new Circle();
+    private final Circle Circle1 = new Circle();
     
     private void pointLost(){
         if(caughtOnion() == true){
