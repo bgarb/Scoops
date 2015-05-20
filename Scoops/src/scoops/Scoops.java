@@ -59,14 +59,14 @@ public class Scoops extends Application {
     
 
    
-    //private ImageView iceCream1;
-    //public void collisionDectection(){
-      //  int retval = Double.compare(iceCream1.yProperty(), 101);
-        //if(retval < 0){
-          // iceCream1.setValue(visible) = false;
-         
-        //}
-    //}                  
+    private ImageView iceCream1;
+    public void collisionDectection(){
+        int retval = Double.compare(iceCream1.getY(), 101);
+        if(retval < 0){
+           iceCream1.setVisible(false); 
+        }
+    }                  
+
 
 
 }
