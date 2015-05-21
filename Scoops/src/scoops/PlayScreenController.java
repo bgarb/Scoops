@@ -39,6 +39,7 @@ import javafx.scene.shape.Circle;
 public class PlayScreenController implements Initializable{
     /**
      * Initializes the controller class.
+     * @param url
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -94,6 +95,7 @@ public class PlayScreenController implements Initializable{
     
     private boolean caughtOnion(){
         if (Onion.getY() == cone.getY() && Onion.getX() == cone.getX()){
+            Onion.setVisible(false);
             return true;
         }
         else {
@@ -116,4 +118,9 @@ public class PlayScreenController implements Initializable{
 
    
     }
-}   
+}
+
+
+
+
+

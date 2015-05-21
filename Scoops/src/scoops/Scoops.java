@@ -25,6 +25,8 @@ public class Scoops extends Application {
     
     static Stage mainWindow;
     private static final Image IceCream = new Image("http://foodservice.bluebunny.com/content/cms/products/204x154/french_vanilla_3gal.s3v1.png");
+    private static final Image Tomato = new Image("http://pngimg.com/upload/tamato_PNG2700.png");
+    
     private static final int COLUMNS  =   4;
     private static final int COUNT    =  10;
     private static final int OFFSET_X =  0;
@@ -39,7 +41,7 @@ public class Scoops extends Application {
         
         final ImageView imageView = new ImageView(IceCream);
         imageView.setViewport(new Rectangle2D(OFFSET_X, OFFSET_Y, WIDTH, HEIGHT));
-
+        
         final Animation animation = new IceCreamAnimation(
                 imageView,
                 Duration.millis(1000),
@@ -47,6 +49,15 @@ public class Scoops extends Application {
                 OFFSET_X, OFFSET_Y,
                 WIDTH, HEIGHT
         );
+        
+        final ImageView tomatoImageView = new ImageView(Tomato); 
+        tomatoImageView.setViewport(new Rectangle2D(OFFSET_X, OFFSET_Y, WIDTH, HEIGHT)); 
+        
+        final Animation tomatoAnimation = new TomatoAnimation(
+           
+        
+        );
+       
         animation.setCycleCount(Animation.INDEFINITE);
         animation.play();
     
