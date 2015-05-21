@@ -48,13 +48,14 @@ import javafx.util.Duration;
 public class PlayScreenController implements Initializable {
   
        
-    Image IceCream = new Image("http://foodservice.bluebunny.com/content/cms/products/204x154/french_vanilla_3gal.s3v1.png");
+    Image IceCream = new Image("http://40.media.tumblr.com/89c8768c2980e4301383e9dfebc6a3e4/tumblr_nopqe9zTje1uvakkzo1_100.png");
    // public static final int COLUMNS  =   4;
     //public static final int COUNT    =  10;
-   public static final int OFFSET_X =  50;
-    public static  int OFFSET_Y =  50;
+   public static final int OFFSET_X =  0;
+    public static  int OFFSET_Y =  0;
     public static final int WIDTH    = 204;
-    public static final int HEIGHT   = 154;
+    public static final int HEIGHT   = 174;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {    
         
@@ -62,8 +63,17 @@ public class PlayScreenController implements Initializable {
         ImageView imageView = new ImageView(IceCream);
         imageView.setViewport(new Rectangle2D(OFFSET_X, OFFSET_Y, WIDTH, HEIGHT));
         mainPane.getChildren().add(imageView);
-       
+       /** int scaledImageSizeW;
         
+        scaledImageSizeW = (int) IceCream.getWidth()/2;
+        
+       int scaledImageSizeH;
+        
+        scaledImageSizeH = (int) IceCream.getHeight()/2;
+         imageView.setScaleX(1/2);
+         imageView.setScaleY(1/2);**/
+         
+         
        final Animation animation = new IceCreamAnimation(
                 imageView,
                 Duration.millis(1000),
