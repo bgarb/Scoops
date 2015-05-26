@@ -65,11 +65,9 @@ public class PlayScreenController implements Initializable {
                         if (key == RIGHT) {                           
                             conePosition++;
                             keyPressed = now;
-                            rightPressed = true;
                         }else if (key == LEFT) {
                             conePosition--;
-                            keyPressed = now;
-                            leftPressed = true;
+                            keyPressed = now;        
                         }
 
                         cone.setX(conePosition);
