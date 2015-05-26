@@ -84,13 +84,10 @@ public class PlayScreenController implements Initializable {
     private javafx.scene.control.Label label;
     private int conePosition;
     private long keyPressed;
-    private boolean rightPressed = false;
-    private boolean leftPressed = false;
-    
 
     @FXML
     private ImageView cone;
-
+    
     @FXML
     private void handleKeyPressed(KeyEvent event) {
         KeyCode key = event.getCode();
@@ -130,8 +127,7 @@ public class PlayScreenController implements Initializable {
         return y;   
     }
         
-        @FXML
-    
+    @FXML
     private void quitButton(ActionEvent event) {
         Parent root;
         try {
