@@ -38,7 +38,8 @@ public class StartScreenController implements Initializable {
     private Label label;
     
     @FXML
-    private void playScreenButton(ActionEvent event) {
+
+    private void playsScreenButton(ActionEvent event) {
         Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("OfficialPlayScreen.fxml"));

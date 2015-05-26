@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package scoops;
 
 import javafx.animation.Animation;
@@ -28,7 +23,7 @@ public class Scoops extends Application {
     private static final Image Tomato = new Image("http://pngimg.com/upload/tamato_PNG2700.png");
     
     private static final int COLUMNS  =   4;
-    private static final int COUNT    =  10;
+    private static final double COUNT    =  10;
     private static final int OFFSET_X =  0;
     private static final int OFFSET_Y =  5;
     private static final int WIDTH    = 204;
@@ -62,7 +57,6 @@ public class Scoops extends Application {
         animation.play();
     
         Scene scene = new Scene(root);
-        
         stage.setScene(scene);
         stage.show();
     }
