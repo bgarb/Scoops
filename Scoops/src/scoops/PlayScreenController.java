@@ -21,6 +21,19 @@ import javafx.scene.image.ImageView;
 import static javafx.scene.input.KeyCode.*;
 import javafx.scene.input.KeyEvent;
 import javafx.animation.AnimationTimer;
+import javafx.animation.Animation;
+import javafx.event.EventType;
+import javafx.geometry.Rectangle2D;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+import javafx.util.Duration;
+
+
+
+
 
 /**
  *
@@ -31,16 +44,42 @@ import javafx.animation.AnimationTimer;
  *
  * @author csstudent
  */
+
 public class PlayScreenController implements Initializable {
-
-    /**
-     * Initializes the controller class.
-     */
+  
+       
+    Image IceCream = new Image("http://foodservice.bluebunny.com/content/cms/products/204x154/french_vanilla_3gal.s3v1.png");
+   // public static final int COLUMNS  =   4;
+    //public static final int COUNT    =  10;
+   public static final int OFFSET_X =  50;
+    public static  int OFFSET_Y =  50;
+    public static final int WIDTH    = 204;
+    public static final int HEIGHT   = 154;
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    public void initialize(URL url, ResourceBundle rb) {    
+        
+        
+        ImageView imageView = new ImageView(IceCream);
+        imageView.setViewport(new Rectangle2D(OFFSET_X, OFFSET_Y, WIDTH, HEIGHT));
+        mainPane.getChildren().add(imageView);
+       
+        
+       final Animation animation = new IceCreamAnimation(
+                imageView,
+                Duration.millis(1000),
+                mainPane.getHeight(),
+                 OFFSET_Y,
+                WIDTH, HEIGHT
+        );
+        animation.setCycleCount(Animation.INDEFINITE);
+        animation.play();
+    
+        
+    
     }
-
+    @FXML
+    private AnchorPane mainPane;
+    
     @FXML
     private javafx.scene.control.Label label;
     private int conePosition;

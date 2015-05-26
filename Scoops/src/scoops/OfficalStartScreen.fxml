@@ -16,7 +16,7 @@
             <Image url="@Screen%20Shot%202015-04-29%20at%201.44.31%20PM.png" />
          </image>
       </ImageView>
-    <Button defaultButton="true" graphicTextGap="1.0" layoutX="208.0" layoutY="220.0" mnemonicParsing="false" onAction="#playScreenButton" text="New Game" textFill="WHITE">
+    <Button defaultButton="true" graphicTextGap="1.0" layoutX="208.0" layoutY="220.0" mnemonicParsing="false" onAction="#playsScreenButton" text="New Game" textFill="WHITE">
       <effect>
         <DropShadow />
       </effect>

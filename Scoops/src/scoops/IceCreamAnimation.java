@@ -6,7 +6,7 @@
 package scoops;
 import javafx.animation.Interpolator;
 import javafx.animation.Transition;
-//import javafx.geometry.Rectangle2D;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 /**
@@ -15,43 +15,33 @@ import javafx.util.Duration;
  */
 public class IceCreamAnimation extends Transition {
     
+    //private final Duration duration;
     private final ImageView imageView;
-    private final int count;
-    private final int columns;
-    private final int offsetY;
+    
+    
+    private  int offsetY;
     private final int width;
     private final int height;
+    private double screenHeight;
 
     private int lastIndex;
 
     public IceCreamAnimation(
-        ImageView imageView, 
-        Duration duration, 
-        int count,   int columns,
-        int offsetX, int offsetY,
-        int width,   int height) {
+            ImageView imageView, 
+            Duration duration,double screenHeight, int offsetY,
+            int width,   int height) {
         this.imageView = imageView;
-        this.count     = count;
-        this.columns   = columns;
         this.offsetY   = offsetY;
+        this.screenHeight = 360;
         this.width     = width;
-        this.height    = height; 
+        this.height    = height;
         setCycleDuration(duration);
         setInterpolator(Interpolator.LINEAR);
     }
 
-    IceCreamAnimation(Duration millis, int count, int columns, int offsetY, int width, int height) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
-
-    @Override
-    protected void interpolate(double k) {
-        final int index = Math.min((int) Math.floor(k * count), count - 1);
-        if (index != lastIndex) {
-            final int y = (index / columns) * height + offsetY;
-           imageView.setY(y);
-           lastIndex = index;
-        }
+    protected void interpolate(double v) {
+      imageView.setY(v*screenHeight);
+      System.out.println(v*screenHeight);  
     }
 }
