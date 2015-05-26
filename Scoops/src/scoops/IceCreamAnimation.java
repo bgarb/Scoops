@@ -32,16 +32,22 @@ public class IceCreamAnimation extends Transition {
             int width,   int height) {
         this.imageView = imageView;
         this.offsetY   = offsetY;
-        this.screenHeight = 360;
+        this.screenHeight = 430;
         this.width     = width;
         this.height    = height;
         setCycleDuration(duration);
         setInterpolator(Interpolator.LINEAR);
     }
 
-
+    
     protected void interpolate(double v) {
-      imageView.setY(v*screenHeight);
-      System.out.println(v*screenHeight);  
+       
+     if(screenHeight==430){
+        imageView.setX(Math.random()*200);
+      }
+       imageView.setY(v*screenHeight);
+      //imageView.setY(v*screenHeight);
+      //System.out.println(v*screenHeight); 
+      
     }
 }
