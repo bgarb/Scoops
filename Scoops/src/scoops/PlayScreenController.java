@@ -82,6 +82,16 @@ public class PlayScreenController implements Initializable {
                 WIDTH, HEIGHT
         );
         animation.setCycleCount(Animation.INDEFINITE);
+        //animation.setOnFinished(new EventHandler<ActionEvent>() {
+       
+       //public void handle(ActionEvent event){
+           
+       //imageView.setX(Math.random()*400);
+       
+       //}
+               
+    
+    //});
         animation.play();
     
         
