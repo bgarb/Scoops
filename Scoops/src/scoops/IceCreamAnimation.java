@@ -44,17 +44,16 @@ public class IceCreamAnimation extends Transition {
   
           imageView.setY(v*screenHeight);
           
-          if(v*screenHeight==400){
-          imageView.setX(Math.random()*400);
+          //if(v*screenHeight==400){
+         // imageView.setX(Math.random()*400);
           
       }
           
        
-     ObjectProperty<EventHandler<ActionEvent>> onFinishedProperty{
-        
+     
 
 
-}
+
        
      /**if(screenHeight==430){
         imageView.setX(Math.random()*200);
@@ -64,4 +63,4 @@ public class IceCreamAnimation extends Transition {
       //System.out.println(v*screenHeight); 
       
     }
-}
+
