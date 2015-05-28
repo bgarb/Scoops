@@ -23,7 +23,8 @@ public class IceCreamAnimation extends Transition {
     private final int width;
     private final int height;
     private double screenHeight;
-
+   
+    
     private int lastIndex;
 
     public IceCreamAnimation(
@@ -49,7 +50,10 @@ public class IceCreamAnimation extends Transition {
           
       }
           
+       private void speedChange( Duration duration){
+           Duration.add(duratio)
        
+       }
      
 
 

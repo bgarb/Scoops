@@ -71,9 +71,10 @@ public class PlayScreenController implements Initializable {
          imageView.setScaleY(1/2);**/
          
          
+         
        final Animation animation = new IceCreamAnimation(
                 imageView,
-                Duration.millis(1000),
+                Duration.millis(1500),
                 mainPane.getHeight(),
                  OFFSET_Y,
                 WIDTH, HEIGHT
@@ -86,6 +87,7 @@ public class PlayScreenController implements Initializable {
            
        imageView.setX(Math.random()*400);
        animation.play();
+       
        }
                
     
