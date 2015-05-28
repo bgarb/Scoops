@@ -10,7 +10,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -22,15 +21,13 @@ import static javafx.scene.input.KeyCode.*;
 import javafx.scene.input.KeyEvent;
 import javafx.animation.AnimationTimer;
 import javafx.animation.Animation;
-import javafx.event.EventType;
+
 import javafx.geometry.Rectangle2D;
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
 import javafx.util.Duration;
-
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 
 
 
@@ -81,17 +78,18 @@ public class PlayScreenController implements Initializable {
                  OFFSET_Y,
                 WIDTH, HEIGHT
         );
-        animation.setCycleCount(Animation.INDEFINITE);
-        //animation.setOnFinished(new EventHandler<ActionEvent>() {
-       
-       //public void handle(ActionEvent event){
+        animation.setCycleCount(1);
+        animation.setOnFinished(new EventHandler<ActionEvent>() {
+            
+       @Override
+       public void handle(ActionEvent event){
            
-       //imageView.setX(Math.random()*400);
-       
-       //}
+       imageView.setX(Math.random()*400);
+       animation.play();
+       }
                
     
-    //});
+    });
         animation.play();
     
         
