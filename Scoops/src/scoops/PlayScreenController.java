@@ -44,20 +44,22 @@ import javafx.event.EventHandler;
 
 public class PlayScreenController implements Initializable {
   
-       
+    Image tomato = new Image("https://40.media.tumblr.com/f015405bdad172dfa51a6055941cec6d/tumblr_npbyxjva7m1uwdbf1o1_100.png");  
     Image IceCream = new Image("http://40.media.tumblr.com/89c8768c2980e4301383e9dfebc6a3e4/tumblr_nopqe9zTje1uvakkzo1_100.png");
    // public static final int COLUMNS  =   4;
     //public static final int COUNT    =  10;
-   public static final int OFFSET_X =  0;
+    public static final int OFFSET_X =  0;
     public static  int OFFSET_Y =  0;
     public static final int WIDTH    = 204;
     public static final int HEIGHT   = 174;
+    ImageView imageView= new ImageView(IceCream);
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {    
+         
         
+       
         
-        ImageView imageView = new ImageView(IceCream);
         imageView.setViewport(new Rectangle2D(OFFSET_X, OFFSET_Y, WIDTH, HEIGHT));
         mainPane.getChildren().add(imageView);
        /** int scaledImageSizeW;
@@ -72,7 +74,7 @@ public class PlayScreenController implements Initializable {
          
          
          
-       final Animation animation = new IceCreamAnimation(
+        IceCreamAnimation animation = new IceCreamAnimation(
                 imageView,
                 Duration.millis(1500),
                 mainPane.getHeight(),
@@ -84,9 +86,26 @@ public class PlayScreenController implements Initializable {
             
        @Override
        public void handle(ActionEvent event){
-           
-       imageView.setX(Math.random()*400);
-       animation.play();
+        
+        int gen = (int) (Math.random()*100);
+        if(gen <=80){
+        imageView = new ImageView(IceCream);
+        animation.setImageView(imageView);
+        imageView.setViewport(new Rectangle2D(OFFSET_X, OFFSET_Y, WIDTH, HEIGHT));
+        mainPane.getChildren().add(imageView);
+        imageView.setX(Math.random()*400);
+        
+        animation.play();
+        }else{
+        imageView = new ImageView(tomato);
+        animation.setImageView(imageView);
+        imageView.setViewport(new Rectangle2D(OFFSET_X, OFFSET_Y, WIDTH, HEIGHT));
+        mainPane.getChildren().add(imageView);
+        imageView.setX(Math.random()*400);
+        animation.play();
+        
+        }    
+      
        
        }
                
