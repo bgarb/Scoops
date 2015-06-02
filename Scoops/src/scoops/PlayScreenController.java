@@ -21,7 +21,19 @@ import javafx.scene.image.ImageView;
 import static javafx.scene.input.KeyCode.*;
 import javafx.scene.input.KeyEvent;
 import javafx.animation.AnimationTimer;
+<<<<<<< HEAD
 import javafx.scene.shape.Circle;
+=======
+import javafx.animation.Animation;
+import javafx.event.EventType;
+import javafx.geometry.Rectangle2D;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+import javafx.util.Duration;
+>>>>>>> 765c5490998eb4f0329f9f62f8ba4c8d24c4309e
 
 
 
@@ -37,6 +49,7 @@ import javafx.scene.shape.Circle;
  *
  * @author csstudent
  */
+<<<<<<< HEAD
 public class PlayScreenController implements Initializable{
     /**
      * Initializes the controller class.
@@ -48,6 +61,45 @@ public class PlayScreenController implements Initializable{
     }    
     
      @FXML
+=======
+
+public class PlayScreenController implements Initializable {
+  
+       
+    Image IceCream = new Image("http://foodservice.bluebunny.com/content/cms/products/204x154/french_vanilla_3gal.s3v1.png");
+   // public static final int COLUMNS  =   4;
+    //public static final int COUNT    =  10;
+   public static final int OFFSET_X =  50;
+    public static  int OFFSET_Y =  50;
+    public static final int WIDTH    = 204;
+    public static final int HEIGHT   = 154;
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {    
+        
+        
+        ImageView imageView = new ImageView(IceCream);
+        imageView.setViewport(new Rectangle2D(OFFSET_X, OFFSET_Y, WIDTH, HEIGHT));
+        mainPane.getChildren().add(imageView);
+       
+        
+       final Animation animation = new IceCreamAnimation(
+                imageView,
+                Duration.millis(1000),
+                mainPane.getHeight(),
+                 OFFSET_Y,
+                WIDTH, HEIGHT
+        );
+        animation.setCycleCount(Animation.INDEFINITE);
+        animation.play();
+    
+        
+    
+    }
+    @FXML
+    private AnchorPane mainPane;
+    
+    @FXML
+>>>>>>> 765c5490998eb4f0329f9f62f8ba4c8d24c4309e
     private javafx.scene.control.Label label;
     private int conePosition;
      
@@ -57,6 +109,7 @@ public class PlayScreenController implements Initializable{
     @FXML
     private void handleKeyPressed (KeyEvent event) {
         KeyCode key = event.getCode();
+<<<<<<< HEAD
         conePosition = 0;
         AnimationTimer timer = new AnimationTimer() {
 
@@ -67,6 +120,40 @@ public class PlayScreenController implements Initializable{
         };
         if (key == RIGHT) {
             conePosition++;
+=======
+        keyPressed = 0;
+            new AnimationTimer() {
+                @Override
+                public void handle(long now) {
+                    if (keyPressed == 0) {
+                        keyPressed = now;
+                    } else if (true){//now - keyPressed > 200) {
+                        if (key == RIGHT) {                           
+                            conePosition++;
+                            keyPressed = now;
+                        }else if (key == LEFT) {
+                            conePosition--;
+                            keyPressed = now;        
+                        }
+
+                        cone.setX(conePosition);
+                    }
+                }    
+            }.start();       
+    }
+
+    private void handleKeyReleased(KeyEvent event) {
+        KeyCode key = event.getCode();
+       
+        
+    }
+    int x = 0;
+    int y = 0;
+    public int getY(){
+        if( x >= 0){
+            conePosition += x;
+            y = conePosition;
+>>>>>>> 765c5490998eb4f0329f9f62f8ba4c8d24c4309e
         }
         else if (key == LEFT) {
             conePosition--;
@@ -74,6 +161,7 @@ public class PlayScreenController implements Initializable{
            
         cone.setX(conePosition);
         
+<<<<<<< HEAD
     }
     
     

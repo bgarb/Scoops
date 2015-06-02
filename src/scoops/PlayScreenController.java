@@ -21,15 +21,7 @@ import javafx.scene.image.ImageView;
 import static javafx.scene.input.KeyCode.*;
 import javafx.scene.input.KeyEvent;
 import javafx.animation.AnimationTimer;
-import javafx.animation.Animation;
-import javafx.event.EventType;
-import javafx.geometry.Rectangle2D;
-import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
-import javafx.util.Duration;
+import javafx.scene.shape.Circle;
 
 
 
@@ -39,52 +31,26 @@ import javafx.util.Duration;
  *
  * @author csstudent
  */
+
 /**
  * FXML Controller class
  *
  * @author csstudent
  */
-
-public class PlayScreenController implements Initializable {
-  
-       
-    Image IceCream = new Image("http://foodservice.bluebunny.com/content/cms/products/204x154/french_vanilla_3gal.s3v1.png");
-   // public static final int COLUMNS  =   4;
-    //public static final int COUNT    =  10;
-   public static final int OFFSET_X =  50;
-    public static  int OFFSET_Y =  50;
-    public static final int WIDTH    = 204;
-    public static final int HEIGHT   = 154;
+public class PlayScreenController implements Initializable{
+    /**
+     * Initializes the controller class.
+     * @param url
+     */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {    
-        
-        
-        ImageView imageView = new ImageView(IceCream);
-        imageView.setViewport(new Rectangle2D(OFFSET_X, OFFSET_Y, WIDTH, HEIGHT));
-        mainPane.getChildren().add(imageView);
-       
-        
-       final Animation animation = new IceCreamAnimation(
-                imageView,
-                Duration.millis(1000),
-                mainPane.getHeight(),
-                 OFFSET_Y,
-                WIDTH, HEIGHT
-        );
-        animation.setCycleCount(Animation.INDEFINITE);
-        animation.play();
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }    
     
-        
-    
-    }
-    @FXML
-    private AnchorPane mainPane;
-    
-    @FXML
+     @FXML
     private javafx.scene.control.Label label;
     private int conePosition;
-    private long keyPressed;
-
+     
     @FXML
     private ImageView cone;
     
@@ -139,8 +105,37 @@ public class PlayScreenController implements Initializable {
             Logger.getLogger(StartScreenController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    private ImageView Onion; 
+    
+    private boolean caughtOnion(){
+        if (Onion.getY() == cone.getY() && Onion.getX() == cone.getX()){
+            Onion.setVisible(false);
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 
+    private int lives = 3; 
+    private final Circle Circle1 = new Circle();
+    
+    private void pointLost(){
+        if(caughtOnion() == true){
+            lives = lives - 1;
+            Circle1.setStyle("-fx-opacity-0.21");
+        }
+            if(lives == 3){
+            quitButton();
+        }            
     
 
    
+    }
 }
+
+
+
+
+

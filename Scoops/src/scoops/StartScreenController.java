@@ -38,7 +38,6 @@ public class StartScreenController implements Initializable {
     private Label label;
     
     @FXML
-
     private void playsScreenButton(ActionEvent event) {
         Parent root;
         try {

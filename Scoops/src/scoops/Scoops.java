@@ -18,44 +18,33 @@ import javafx.util.Duration;
  */
 public class Scoops extends Application {
     
-    static Stage mainWindow;
-    private static final Image IceCream = new Image("http://foodservice.bluebunny.com/content/cms/products/204x154/french_vanilla_3gal.s3v1.png");
-    private static final Image Tomato = new Image("http://pngimg.com/upload/tamato_PNG2700.png");
-    
-    private static final int COLUMNS  =   4;
-    private static final double COUNT    =  10;
-    private static final int OFFSET_X =  0;
-    private static final int OFFSET_Y =  5;
-    private static final int WIDTH    = 204;
-    private static final int HEIGHT   = 154;
-    
+   public static Stage mainWindow;
+   /** public static final Image IceCream = new Image("http://foodservice.bluebunny.com/content/cms/products/204x154/french_vanilla_3gal.s3v1.png");
+    public static final int COLUMNS  =   4;
+    public static final int COUNT    =  10;
+    public static final int OFFSET_X =  0;
+    public static final int OFFSET_Y =  5;
+    public static final int WIDTH    = 204;
+    public static final int HEIGHT   = 154;
+    **/
     @Override
     public void start(Stage stage) throws Exception {
         mainWindow = stage;
-        Parent root = FXMLLoader.load(getClass().getResource("OfficalStartScreen.fxml"));
+       Parent root = FXMLLoader.load(getClass().getResource("OfficalStartScreen.fxml"));
         
-        final ImageView imageView = new ImageView(IceCream);
+       /** final ImageView imageView = new ImageView(IceCream);
         imageView.setViewport(new Rectangle2D(OFFSET_X, OFFSET_Y, WIDTH, HEIGHT));
-        
-        final Animation animation = new IceCreamAnimation(
+
+       final Animation animation = new IceCreamAnimation(
                 imageView,
                 Duration.millis(1000),
                 COUNT, COLUMNS,
                 OFFSET_X, OFFSET_Y,
                 WIDTH, HEIGHT
         );
-        
-        final ImageView tomatoImageView = new ImageView(Tomato); 
-        tomatoImageView.setViewport(new Rectangle2D(OFFSET_X, OFFSET_Y, WIDTH, HEIGHT)); 
-        
-        final Animation tomatoAnimation = new TomatoAnimation(
-           
-        
-        );
-       
         animation.setCycleCount(Animation.INDEFINITE);
         animation.play();
-    
+    **/
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
