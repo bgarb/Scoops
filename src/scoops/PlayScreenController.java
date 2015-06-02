@@ -55,7 +55,7 @@ public class PlayScreenController implements Initializable{
     private ImageView cone;
     
     @FXML
-    private void handleKeyPressed(KeyEvent event) {
+    private void handleKeyPressed (KeyEvent event) {
         KeyCode key = event.getCode();
         keyPressed = 0;
             new AnimationTimer() {
