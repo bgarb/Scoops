@@ -16,7 +16,7 @@ import javafx.util.Duration;
 public class IceCreamAnimation extends Transition {
     
     //private final Duration duration;
-    private final ImageView imageView;
+    private ImageView imageView;
     
     
     private  int offsetY;
@@ -40,7 +40,11 @@ public class IceCreamAnimation extends Transition {
         setInterpolator(Interpolator.LINEAR);
     }
     //int count = 0; 
+   public void setImageView(ImageView image){
+       imageView=image;
+       
    
+   }
     protected void interpolate(double v) {
   
           imageView.setY(v*screenHeight);
@@ -50,10 +54,10 @@ public class IceCreamAnimation extends Transition {
           
       }
           
-       private void speedChange( Duration duration){
-           Duration.add(duratio)
+       //private void speedChange( Duration duration){
+         //  Duration.add(duration);
        
-       }
+      // }
      
 
 
