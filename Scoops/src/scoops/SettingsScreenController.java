@@ -41,7 +41,7 @@ public class SettingsScreenController implements Initializable {
     private void startScreenButton(ActionEvent event) {
         Parent root;
         try {
-            root = FXMLLoader.load(getClass().getResource("OfficialStartScreen.fxml"));
+            root = FXMLLoader.load(getClass().getResource("OfficalStartScreen.fxml"));
             Scene scene = new Scene(root);
             Scoops.mainWindow.setScene(scene);
             Scoops.mainWindow.show();

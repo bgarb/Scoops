@@ -86,7 +86,7 @@ public class PlayScreenController implements Initializable {
             
        @Override
        public void handle(ActionEvent event){
-        
+        imageView.setOpacity(0.0);
         int gen = (int) (Math.random()*100);
         if(gen <=80){
         imageView = new ImageView(IceCream);
@@ -96,13 +96,16 @@ public class PlayScreenController implements Initializable {
         imageView.setX(Math.random()*400);
         
         animation.play();
+        
         }else{
+            
         imageView = new ImageView(tomato);
         animation.setImageView(imageView);
         imageView.setViewport(new Rectangle2D(OFFSET_X, OFFSET_Y, WIDTH, HEIGHT));
         mainPane.getChildren().add(imageView);
         imageView.setX(Math.random()*400);
         animation.play();
+        
         
         }    
       
@@ -161,7 +164,7 @@ public class PlayScreenController implements Initializable {
     private void quitButton(ActionEvent event) {
         Parent root;
         try {
-            root = FXMLLoader.load(getClass().getResource("OfficialStartScreen.fxml"));
+            root = FXMLLoader.load(getClass().getResource("OfficalStartScreen.fxml"));
             Scene scene = new Scene(root);
             Scoops.mainWindow.setScene(scene);
             Scoops.mainWindow.show();
