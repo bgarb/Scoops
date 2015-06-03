@@ -53,9 +53,10 @@ public class PlayScreenController implements Initializable{
      
     @FXML
     private ImageView cone;
+    private long keyPressed; 
     
     @FXML
-    private void handleKeyPressed (KeyEvent event) {
+   private void handleKeyPressed (KeyEvent event) {
         KeyCode key = event.getCode();
         keyPressed = 0;
             new AnimationTimer() {
@@ -78,23 +79,9 @@ public class PlayScreenController implements Initializable{
             }.start();       
     }
 
-    private void handleKeyReleased(KeyEvent event) {
-        KeyCode key = event.getCode();
-       
-        
-    }
-    int x = 0;
-    int y = 0;
-    public int getY(){
-        if( x >= 0){
-            conePosition += x;
-            y = conePosition;
-        }
-        return y;   
-    }
-        
-    @FXML
-    private void quitButton(ActionEvent event) {
+      
+   
+    private void quitButton() {
         Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("OfficialStartScreen.fxml"));
