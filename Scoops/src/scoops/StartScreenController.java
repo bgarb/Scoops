@@ -38,12 +38,15 @@ public class StartScreenController implements Initializable {
     private Label label;
     
     @FXML
-    private void playsScreenButton(ActionEvent event) {
+    private void playScreenButton(ActionEvent event) {
+        FXMLLoader myFXMLLoader = new FXMLLoader(getClass().getResource("OfficialPlayScreen.fxml"));
         Parent root;
         try {
-            root = FXMLLoader.load(getClass().getResource("OfficialPlayScreen.fxml"));
+            root = myFXMLLoader.load();
+            PlayScreenController playScreenController = myFXMLLoader.getController();
             Scene scene = new Scene(root);
             Scoops.mainWindow.setScene(scene);
+            playScreenController.setScene(scene);
             Scoops.mainWindow.show();
         } catch (IOException ex) {
             Logger.getLogger(StartScreenController.class.getName()).log(Level.SEVERE, null, ex);

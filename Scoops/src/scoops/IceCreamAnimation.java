@@ -50,10 +50,9 @@ public class IceCreamAnimation extends Transition {
           
       }
           
-       private void speedChange( Duration duration){
-           Duration.add(duratio)
-       
-       }
+       //private void speedChange(Duration duration){
+         //  Duration.add(duration);
+       //}
      
 
 
