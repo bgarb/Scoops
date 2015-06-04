@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.web.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
@@ -41,5 +42,13 @@
             </ImageView>
          </children>
       </Pane>
+      <ImageView fitHeight="80.0" fitWidth="47.0" layoutX="227.0" layoutY="434.0">
+         <image>
+            <Image url="@../../../../../Desktop/grid.png" />
+         </image>
+      </ImageView>
+      <Circle fill="#dcbadd" layoutX="108.0" layoutY="32.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#dcbadd" layoutX="130.0" layoutY="32.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#dcbadd" layoutX="152.0" layoutY="32.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
    </children>
 </Pane>

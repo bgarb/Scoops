@@ -25,6 +25,8 @@ import javafx.scene.image.ImageView;
 import static javafx.scene.input.KeyCode.*;
 import javafx.scene.input.KeyEvent;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.geometry.Rectangle2D;
 
 
 
@@ -45,19 +47,85 @@ public class PlayScreenController implements Initializable {
     public static  int OFFSET_Y =  0;
     public static final int WIDTH    = 204;
     public static final int HEIGHT   = 174;
+    ImageView imageView= new ImageView(IceCream);
     
     private static final int KEYBOARD_MOVEMENT = 10;
     
+      
+    @FXML
+    private AnchorPane mainPane;
+    
     @Override
-    public void initialize(URL url, ResourceBundle rb) {  
+    public void initialize(URL url, ResourceBundle rb) {    
+         
+        
+       
+        
+        imageView.setViewport(new Rectangle2D(OFFSET_X, OFFSET_Y, WIDTH, HEIGHT));
+        mainPane.getChildren().add(imageView);
+       /** int scaledImageSizeW;
+        
+        scaledImageSizeW = (int) IceCream.getWidth()/2;
+        
+       int scaledImageSizeH;
+        
+        scaledImageSizeH = (int) IceCream.getHeight()/2;
+         imageView.setScaleX(1/2);
+         imageView.setScaleY(1/2);**/
+         
+         
+         
+        IceCreamAnimation animation = new IceCreamAnimation(
+                imageView,
+                Duration.millis(1500),
+                mainPane.getHeight(),
+                 OFFSET_Y,
+                WIDTH, HEIGHT
+        );
+        animation.setCycleCount(1);
+
+        animation.setOnFinished(new EventHandler<ActionEvent>() {
+            
+       @Override
+       public void handle(ActionEvent event){
+        imageView.setOpacity(0.0);
+        int gen = (int) (Math.random()*100);
+        if(gen <=80){
+        imageView = new ImageView(IceCream);
+        animation.setImageView(imageView);
+        imageView.setViewport(new Rectangle2D(OFFSET_X, OFFSET_Y, WIDTH, HEIGHT));
+        mainPane.getChildren().add(imageView);
+        imageView.setX(Math.random()*400);
+        
+        animation.play();
+        
+        }else{
+            
+        //imageView = new ImageView(tomato);
+        animation.setImageView(imageView);
+        imageView.setViewport(new Rectangle2D(OFFSET_X, OFFSET_Y, WIDTH, HEIGHT));
+        mainPane.getChildren().add(imageView);
+        imageView.setX(Math.random()*400);
+        animation.play();
+        
+        
+        }    
+      
+       
+       }
+               
+    
+    });
+        animation.play();
+    
+        
+      
     }
     @FXML
     private ImageView cone;
     
     private Scene scene;
-    
-    @FXML
-    private AnchorPane mainPane;
+  
         
     /*ImageView imageView = new ImageView(IceCream);
     
@@ -80,8 +148,7 @@ public class PlayScreenController implements Initializable {
             animation.play();
         }
     });
-    animation.play();*/
-    
+    animation.play();*/ 
     
     @FXML
      void setScene(Scene scene) {
@@ -103,7 +170,7 @@ public class PlayScreenController implements Initializable {
     private void quitButton(ActionEvent event) {
         Parent root;
         try {
-            root = FXMLLoader.load(getClass().getResource("OfficialStartScreen.fxml"));
+            root = FXMLLoader.load(getClass().getResource("OfficalStartScreen.fxml"));
             Scene scene = new Scene(root);
             Scoops.mainWindow.setScene(scene);
             Scoops.mainWindow.show();
