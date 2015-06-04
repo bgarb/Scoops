@@ -28,6 +28,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.shape.Circle; 
 
 
 
@@ -115,10 +116,45 @@ public class PlayScreenController implements Initializable {
     
     });
         animation.play();
-    
+         
         
-      
+    
+    
     }
+    
+    ActionEvent stop = new ActionEvent(); 
+    
+    private boolean caughtTomato(ImageView cone){
+        if(imageView.getImage() == tomato){
+        double tomatox = imageView.getX();
+        double tomatob = imageView.getY();
+        double conex = cone.getY();
+         double coneb = cone.getX();
+            if (Math.abs(imageView.getY() - cone.getY()) <= 60 && Math.abs(imageView.getX() - cone.getX()) <= 70){
+                imageView.setVisible(false);
+                return true;
+            }
+
+        }
+            return false;
+        }
+
+    private int lives = 3; 
+    private final Circle Circle1 = new Circle();
+    
+    private void pointLost(){
+        if(caughtTomato(cone) == true){
+            lives = lives - 1;
+            Circle1.setStyle("-fx-opacity-0.3");
+        }
+            if(lives == 3){
+            quitButton(stop);
+        }            
+    
+
+   
+    } 
+
 
     @FXML
     private javafx.scene.control.Label label;
@@ -134,7 +170,8 @@ public class PlayScreenController implements Initializable {
     @FXML
     private void handleKeyPressed(KeyEvent event) {
         KeyCode key = event.getCode();
-        conePosition = 0;
+        
+        conePosition = 100;
         keyPressed = 0;
         new AnimationTimer() {
             @Override
@@ -155,7 +192,13 @@ public class PlayScreenController implements Initializable {
 
             }
         }.start();
-    }
+       if(imageView.getImage() == tomato){
+           double x = cone.getX();
+           double y = cone.getY();
+        caughtTomato(cone);
+    
+       }
+       }
     
     
    
@@ -173,7 +216,8 @@ public class PlayScreenController implements Initializable {
         }
     }
 
+       
+   
     
-
    
 }
