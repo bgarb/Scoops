@@ -26,7 +26,8 @@ import static javafx.scene.input.KeyCode.*;
 import javafx.scene.input.KeyEvent;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.shape.Circle; 
+import javafx.scene.shape.Circle;
+import javafx.geometry.Rectangle2D;
 
 
 
