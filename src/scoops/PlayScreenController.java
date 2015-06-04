@@ -53,33 +53,34 @@ public class PlayScreenController implements Initializable{
      
     @FXML
     private ImageView cone;
+    private long keyPressed; 
     
     @FXML
-    private void handleKeyPressed (KeyEvent event) {
+   private void handleKeyPressed (KeyEvent event) {
         KeyCode key = event.getCode();
-        conePosition = 0;
-        AnimationTimer timer = new AnimationTimer() {
+        keyPressed = 0;
+            new AnimationTimer() {
+                @Override
+                public void handle(long now) {
+                    if (keyPressed == 0) {
+                        keyPressed = now;
+                    } else if (true){//now - keyPressed > 200) {
+                        if (key == RIGHT) {                           
+                            conePosition++;
+                            keyPressed = now;
+                        }else if (key == LEFT) {
+                            conePosition--;
+                            keyPressed = now;        
+                        }
 
-            @Override
-            public void handle(long now) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        };
-        if (key == RIGHT) {
-            conePosition++;
-        }
-        else if (key == LEFT) {
-            conePosition--;
-        }
-           
-        cone.setX(conePosition);
-        
+                        cone.setX(conePosition);
+                    }
+                }    
+            }.start();       
     }
-    
-    
+
+      
    
-        @FXML
-    
     private void quitButton() {
         Parent root;
         try {
